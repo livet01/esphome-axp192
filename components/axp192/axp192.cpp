@@ -144,7 +144,7 @@ namespace esphome
             // Enable bat detection
             Write1Byte(0x32, 0x46);
 
-            data = Read8bit(0x12);         // read reg 0x10
+            uint8_t data = Read8bit(0x12); // read reg 0x10
             Write1Byte(0x12, data & 0XBF); // set EXTEN to disable 5v boost
 
             // delay(2000);
